@@ -1,0 +1,2 @@
+class SpellingProblem < ApplicationRecord
+end

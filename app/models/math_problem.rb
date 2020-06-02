@@ -1,0 +1,2 @@
+class MathProblem < ApplicationRecord
+end

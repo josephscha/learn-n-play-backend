@@ -1,0 +1,2 @@
+class CourseProblem < ApplicationRecord
+end

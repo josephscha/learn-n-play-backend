@@ -1,0 +1,2 @@
+class ReadingProblem < ApplicationRecord
+end
