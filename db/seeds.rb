@@ -7,9 +7,9 @@ ReadingProblem.destroy_all
 CourseProblem.destroy_all
 
 User.create(username: "Joseph", email: "Joseph@gmail.com", password_digest: "12345", child_name: "Joseph Jr.", score: 0)
-Course.create(difficulty: "Easy", title: "Math course", description: "Addition & Subtraction", points: 10)
-Course.create(difficulty: "Easy", title: "Reading course", description: "Basic words", points: 10)
-Course.create(difficulty: "Easy", title: "Spelling course", description: "Basic spelling", points: 10)
+Course.create(difficulty: "Easy", title: "Math course level 1", description: "Addition & Subtraction", points: 10)
+Course.create(difficulty: "Easy", title: "Reading course level 1", description: "Basic words", points: 10)
+Course.create(difficulty: "Easy", title: "Spelling course level 1", description: "Basic spelling", points: 10)
 UserCourse.create(user: User.first, course: Course.first)
 UserCourse.create(user: User.first, course: Course.second)
 
@@ -26,7 +26,7 @@ MathProblem.create(problem: "15 - 12", answer: "3")
 MathProblem.create(problem: "21 - 7", answer: "14")
 
 ReadingProblem.create(problem: "apple", answer: "apple", image: "./images/apple.png")
-ReadingProblem.create(problem: "book", answer: "book", image: "./images/book.png")
+# ReadingProblem.create(problem: "book", answer: "book", image: "./images/book.png")
 ReadingProblem.create(problem: "cat", answer: "cat", image: "./images/cat.png")
 ReadingProblem.create(problem: "dog", answer: "dog", image: "./images/dog.png")
 ReadingProblem.create(problem: "egg", answer: "egg", image: "./images/egg.png")
