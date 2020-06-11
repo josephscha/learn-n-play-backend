@@ -2,7 +2,9 @@ class SpellingProblemsController < ApplicationController
 
     def index 
         spelling_problems = SpellingProblem.all 
-        render json:spelling_problems, except: [:created_at, :updated_at]
+        render json: spelling_problems.map { |problem|
+            problem.as_json.merge({ image: url_for(problem.image) })
+          } 
     end
 
     def create 
@@ -12,7 +14,8 @@ class SpellingProblemsController < ApplicationController
 
     def show 
         spelling_problem = SpellingProblem.find(params[:id])
-        render json:spelling_problem, except: [:created_at, :updated_at]
+        image = rails_blob_path(spelling_problem.image)
+        render json: {spelling_problem: spelling_problem, image: image}, except: [:created_at, :updated_at]
     end
 
     def update 

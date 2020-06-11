@@ -2,7 +2,9 @@ class ReadingProblemsController < ApplicationController
 
     def index 
         reading_problems = ReadingProblem.all 
-        render json:reading_problems, except: [:created_at, :updated_at]
+        render json: reading_problems.map { |problem|
+            problem.as_json.merge({ image: url_for(problem.image) })
+          } 
     end
 
     def create 
@@ -12,7 +14,8 @@ class ReadingProblemsController < ApplicationController
 
     def show 
         reading_problem = ReadingProblem.find(params[:id])
-        render json:reading_problem, except: [:created_at, :updated_at]
+        image = rails_blob_path(reading_problem.image)
+        render json: {reading_problem: reading_problem, image: image}, except: [:created_at, :updated_at]
     end
 
     def update 
