@@ -20,8 +20,9 @@ class SpellingProblemsController < ApplicationController
 
     def update 
         spelling_problem = SpellingProblem.find(params[:id])
-        spelling_problem.update(spelling_problem_params)
-        render json:spelling_problem, except: [:created_at, :updated_at]
+        spelling_problem.update(image: params[:image])
+        image_url = rails_blob_path(spelling_problem.image)
+        render json: {spelling_problem: spelling_problem, image_url: image_url}
     end
 
     def destroy
