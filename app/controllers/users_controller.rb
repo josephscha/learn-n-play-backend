@@ -2,7 +2,12 @@ class UsersController < ApplicationController
 
     def create 
         user = User.create(user_params)
-        render json:user, except: [:created_at, :updated_at]
+        render json: user, except: [:created_at, :updated_at]
+        # if user.valid?
+        #     render json: user, status: :created
+        # else 
+        #     render json: {error: 'Failed to create user'}, status: :not_acceptable
+        # end
     end
 
     def index 
@@ -24,6 +29,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
+        # params.require(:user).permit(:username, :password, :email, :child_name, :score)
         params.require(:user).permit!
     end
 end

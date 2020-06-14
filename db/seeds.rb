@@ -42,7 +42,7 @@ SpellingProblem.create(problem: "c _ t", answer: "cat").image.attach(io: File.op
 SpellingProblem.create(problem: "d _ g", answer: "dog").image.attach(io: File.open('./public/images/dog.png'),filename: 'dog.png', content_type: 'application/png')
 SpellingProblem.create(problem: "e _ g", answer: "egg").image.attach(io: File.open('./public/images/egg.png'),filename: 'egg.png', content_type: 'application/png') 
 SpellingProblem.create(problem: "f _ _ h", answer: "fish").image.attach(io: File.open('./public/images/fish.png'),filename: 'fish.png', content_type: 'application/png') 
-SpellingProblem.create(problem: "g _ _ _ _", answer: "grass").image.attach(io: File.open('./public/images/grass.png'),filename: 'grass.png', content_type: 'application/png') 
+SpellingProblem.create(problem: "g _ _ _ s", answer: "grass").image.attach(io: File.open('./public/images/grass.png'),filename: 'grass.png', content_type: 'application/png') 
 SpellingProblem.create(problem: "h _ _ _ e", answer: "house").image.attach(io: File.open('./public/images/house.png'),filename: 'house.png', content_type: 'application/png') 
 SpellingProblem.create(problem: "i _ e", answer: "ice").image.attach(io: File.open('./public/images/ice.png'),filename: 'ice.png', content_type: 'application/png') 
 SpellingProblem.create(problem: "j _ m", answer: "jam").image.attach(io: File.open('./public/images/jam.png'),filename: 'jam.png', content_type: 'application/png') 
