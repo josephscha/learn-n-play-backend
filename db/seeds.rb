@@ -7,6 +7,9 @@ ReadingProblem.destroy_all
 CourseProblem.destroy_all
 
 User.create(username: "Joseph", email: "Joseph@gmail.com", password_digest: "12345", child_name: "Joseph", score: 0)
+User.create(username: "Admin", email: "Admin@gmail.com", password_digest: "12345", child_name: "Admin", score: 0)
+User.create(username: "Andrew", email: "Andrew@gmail.com", password_digest: "12345", child_name: "Andrew Jr.", score: 0)
+
 
 c1= Course.create(difficulty: "Easy", title: "Math course 1", description: "Addition", points: 10)
 c2= Course.create(difficulty: "Easy", title: "Math course 2", description: "Subtraction", points: 10)
